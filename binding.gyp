@@ -3,6 +3,7 @@
     {
       "target_name": "cryptonight",
       "include_dirs": [
+        "./include/",
 	"<!(node -e \"require('nan')\")"
       ],
       "xcode_settings": {
