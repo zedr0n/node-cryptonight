@@ -1,5 +1,6 @@
-# node-cryptonight
-> node bindings for cryptonight hashing
+
+de-cryptonight
+> node bindings for moneroV7 cryptonight hashing
 
 ### Requirements
 
@@ -12,7 +13,19 @@ node-cryptonight requires [Boost](http://www.boost.org)
 ##### Mac
 
     brew install boost
+    
+    
+##### Windows Visual Studio 
 
+  Please refer to this site. https://studiofreya.com/cpp/boost/
+    
+* [Buiilding Boost 1.64, 1.65, 1.66 with Visual Studio 2017](https://studiofreya.com/2017/04/23/building-boost-1-64-with-visual-studio-2017/) 
+* [Use Boost 1.64 in Visual Studio 2017](https://studiofreya.com/2017/05/17/how-to-use-boost-1-64-in-visual-studio-2017/)
+* [Building Boost 1.62 with Visual Studio 2015](https://studiofreya.com/2016/09/29/how-to-build-boost-1-62-with-visual-studio-2015/)
+* [Use C++ Boost library in Visual Studio 2013/2015](https://studiofreya.com/2016/06/25/how-to-use-cpp-boost-library-in-visual-studio/) 
+* [Boost build scripts for Windows](https://github.com/Studiofreya/boost-build-scripts)
+    
+    
 ### Installation
 
     npm install --save node-cryptonight
@@ -62,3 +75,4 @@ cryptonight(Buffer.from('This is a test'))
 ### License
 
 Released under the 3-Clause BSD License. Contains code from the Monero project. See `LICENSE` for more information.
+
