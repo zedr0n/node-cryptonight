@@ -3,8 +3,17 @@
     {
       "target_name": "cryptonight",
       "include_dirs": [
-        "<!(node -e \"require('nan')\")",
-        "C:/Users/glosfer/Downloads/boost_1_62_0"
+       "<!(node -e \"require('nan')\")"
+      ],
+      'conditions': [
+          [
+            'OS=="win"', 
+              {
+                'include_dirs': [
+                  "set/your/boost/library/path for example: C:/Users/glosfer/Downloads/boost_1_62_0" 
+                ] 
+              }
+          ] 
       ],
       "xcode_settings": {
         "OTHER_CFLAGS": [
