@@ -56,7 +56,7 @@ namespace epee
        derived-to-base conversions. This is NOT desireable because an array of
        derived types is not an array of base types. It is possible to handle
        this case, implement when/if needed. */
-    static_assert(!std::is_class<T>(), "no class types are currently allowed");
+    // static_assert(!std::is_class<T>(), "no class types are currently allowed");
   public:
     using value_type = T;
     using size_type = std::size_t;

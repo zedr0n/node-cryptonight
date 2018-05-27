@@ -28,7 +28,11 @@
 // 
 // Parts of this file are originally copyright (c) 2012-2013 The Cryptonote developers
 
+#ifndef (_WIN32) || (_WIN64) || (MSVC)
 #include <unistd.h>
+#else 
+#include <io.h>
+#endif
 #include <cassert>
 #include <cstddef>
 #include <cstdint>

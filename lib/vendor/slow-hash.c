@@ -33,8 +33,11 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdio.h>
+#if defined (_WIN32) || (_WIN64) || (MSVC)
+#include <io.h>
+#else 
 #include <unistd.h>
-
+#endif
 #include "common/int-util.h"
 #include "hash-ops.h"
 #include "oaes_lib.h"

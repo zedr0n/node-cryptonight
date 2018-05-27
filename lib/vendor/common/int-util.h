@@ -34,7 +34,23 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <string.h>
+
+#if defined(_MSC_VER) && (_MSC_VER)(__WIN32) && (__WIN64) 
+#ifndef BIG_ENDIAN
+#define BIG_ENDIAN 4321
+#endif
+
+#ifndef LITTLE_ENDIAN
+#define LITTLE_ENDIAN 1234
+#endif
+
+#ifndef BYTE_ORDER
+#define BYTE_ORDER LITTLE_ENDIAN
+#endif
+#else
+
 #include <sys/param.h>
+#endif
 
 #if defined(__ANDROID__)
 #include <byteswap.h>

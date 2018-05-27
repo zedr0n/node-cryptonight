@@ -34,7 +34,7 @@
 #include <memory.h>
 #include <stdio.h>
 
-#if defined(_WIN32)
+#if defined(_WIN32) || (_WIN64) || (MSVC)
 #include <io.h>
 #include <windows.h>
 #else

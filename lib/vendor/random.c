@@ -38,7 +38,7 @@
 
 static void generate_system_random_bytes(size_t n, void *result);
 
-#if defined(_WIN32)
+#if defined(_WIN32) || (_WIN64) || (MSVC)
 
 #include <windows.h>
 #include <wincrypt.h>

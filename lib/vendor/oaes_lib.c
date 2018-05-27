@@ -46,14 +46,14 @@
  #include <sys/time.h>
 #endif
 
-#ifdef WIN32
+#ifdef WIN32 || _WIN64 || MSVC || _WIN32
 #include <process.h>
 #else
 #include <sys/types.h>
 #include <unistd.h>
 #endif
 
-#ifdef _MSC_VER
+#ifdef WIN32 || _WIN64 || MSVC || _WIN32
 #define GETPID() _getpid()
 #else
 #define GETPID() getpid()

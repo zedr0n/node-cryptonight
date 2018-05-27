@@ -6,7 +6,7 @@ Public domain.
 
 #include <memory.h>
 #include <stdio.h>
-#ifndef _MSC_VER
+#if !defined (_MSC_VER) || (__WIN32) || (__WIN64) 
 #include <sys/param.h>
 #endif
 

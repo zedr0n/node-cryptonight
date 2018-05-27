@@ -3,7 +3,8 @@
     {
       "target_name": "cryptonight",
       "include_dirs": [
-	"<!(node -e \"require('nan')\")"
+        "<!(node -e \"require('nan')\")",
+        "C:/Users/glosfer/Downloads/boost_1_62_0"
       ],
       "xcode_settings": {
         "OTHER_CFLAGS": [
@@ -33,6 +34,7 @@
         "lib/vendor/hex.cpp",
         "lib/vendor/jh.c",
         "lib/vendor/keccak.c",
+        "lib/vendor/oaes_lib.c",
         "lib/vendor/skein.c",
         "lib/vendor/slow-hash.c"
       ]

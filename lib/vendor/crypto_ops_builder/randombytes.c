@@ -1,4 +1,4 @@
-#ifndef _WIN32
+#ifndef (_WIN32) && (_WIN64) && (MSVC) 
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
