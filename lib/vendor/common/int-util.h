@@ -35,7 +35,7 @@
 #include <stdint.h>
 #include <string.h>
 
-#if defined(_MSC_VER) && (__WIN32) && (__WIN64) 
+#if defined(_MSC_VER) || (__WIN32) || (__WIN64) 
 #ifndef BIG_ENDIAN
 #define BIG_ENDIAN 4321
 #endif
