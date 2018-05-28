@@ -10,7 +10,7 @@
             'OS=="win"', 
               {
                 'include_dirs': [
-                  "set/your/boost/library/path for example: C:/Users/glosfer/Downloads/boost_1_62_0" 
+                  "C:/boost_1_62_0" 
                 ] 
               }
           ] 
