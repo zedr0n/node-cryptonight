@@ -1,5 +1,5 @@
 
-de-cryptonight
+node-cryptonight
 > node bindings for moneroV7 cryptonight hashing
 
 ### Requirements
@@ -15,10 +15,38 @@ node-cryptonight requires [Boost](http://www.boost.org)
     brew install boost
     
     
-##### Windows Visual Studio 
+##### [Windows #1] Downloads Boost library and windows-build-tools 
 
-  Please refer to this site. https://studiofreya.com/cpp/boost/
+You need to install windows-build-tools(recommended version is msvc2015), and boost library 
+
+* [Download Boost libray 1.62](https://www.boost.org/users/history/version_1_62_0.html)   
+* [Download Windows Build tools for VS 2015](https://www.microsoft.com/ko-kr/download/details.aspx?id=48159)
+
+##### [Windows #2] build
+
+    npm install --global --production windows-build-tools
     
+    node-gyp configure --msvs_version=2015
+
+    set boost library path in binding.gyp source (in node-cryptonight library)
+    'conditions': [
+          [
+            'OS=="win"', 
+              {
+                'include_dirs': [
+                  "set/your/boost/library/path for example: C:/Users/glosfer/Downloads/boost_1_62_0" 
+                ] 
+              }
+          ] 
+       ],
+
+
+
+
+
+[boost library] 
+
+Please refer to this site. https://studiofreya.com/cpp/boost/
 * [Buiilding Boost 1.64, 1.65, 1.66 with Visual Studio 2017](https://studiofreya.com/2017/04/23/building-boost-1-64-with-visual-studio-2017/) 
 * [Use Boost 1.64 in Visual Studio 2017](https://studiofreya.com/2017/05/17/how-to-use-boost-1-64-in-visual-studio-2017/)
 * [Building Boost 1.62 with Visual Studio 2015](https://studiofreya.com/2016/09/29/how-to-build-boost-1-62-with-visual-studio-2015/)
