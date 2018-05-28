@@ -17,7 +17,7 @@ node-cryptonight requires [Boost](http://www.boost.org)
     
 ##### [Windows #1] Downloads Boost library and windows-build-tools 
 
-You need to install windows-build-tools(recommended version is msvc2015), and boost library 
+You need to install windows-build-tools(recommended version is msvc2015), and 1_62_0 boost library 
 
 * [Download Boost libray 1.62](https://www.boost.org/users/history/version_1_62_0.html)   
 * [Download Windows Build tools for VS 2015](https://www.microsoft.com/ko-kr/download/details.aspx?id=48159)
@@ -28,27 +28,21 @@ You need to install windows-build-tools(recommended version is msvc2015), and bo
     
     node-gyp configure --msvs_version=2015
 
-    set boost library path in binding.gyp source (in node-cryptonight library)
+    locate boost library in C:/boost_1_62_0
     'conditions': [
           [
             'OS=="win"', 
               {
                 'include_dirs': [
-                  "set/your/boost/library/path for example: C:/Users/glosfer/Downloads/boost_1_62_0" 
+                  "C:/boost_1_62_0" 
                 ] 
               }
           ] 
        ],
 
 
-
-
-
 [boost library] 
 
-Please refer to this site. https://studiofreya.com/cpp/boost/
-* [Buiilding Boost 1.64, 1.65, 1.66 with Visual Studio 2017](https://studiofreya.com/2017/04/23/building-boost-1-64-with-visual-studio-2017/) 
-* [Use Boost 1.64 in Visual Studio 2017](https://studiofreya.com/2017/05/17/how-to-use-boost-1-64-in-visual-studio-2017/)
 * [Building Boost 1.62 with Visual Studio 2015](https://studiofreya.com/2016/09/29/how-to-build-boost-1-62-with-visual-studio-2015/)
 * [Use C++ Boost library in Visual Studio 2013/2015](https://studiofreya.com/2016/06/25/how-to-use-cpp-boost-library-in-visual-studio/) 
 * [Boost build scripts for Windows](https://github.com/Studiofreya/boost-build-scripts)
