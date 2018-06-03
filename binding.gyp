@@ -10,7 +10,7 @@
             'OS=="win"', 
               {
                 'include_dirs': [
-                  "C:/boost_1_62_0" 
+                  "C:/dev/boost" 
                 ] 
               }
           ] 
